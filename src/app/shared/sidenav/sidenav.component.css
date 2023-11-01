@@ -2,8 +2,6 @@
   border-right: 2px solid #94a3b8;
   min-height: 100vh;
   padding: 2rem;
-
-  grid-column: 1 / 4;
 }
 
 .logo {
@@ -21,19 +19,10 @@
   row-gap: 1rem;
 }
 
-.btn {
-  border: none;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  font: inherit;
-  font-weight: bold;
-  padding: 0.5rem 1rem;
-  width: 100%;
-}
-
 .btn--search-term {
   background-color: #334155;
   color: #cbd5e1;
+  width: 100%;
   transition: all 0.25s ease-in-out;
 }
 
