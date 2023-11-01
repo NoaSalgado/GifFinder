@@ -1,0 +1,44 @@
+.side-nav {
+  border-right: 2px solid #94a3b8;
+  min-height: 100vh;
+  padding: 2rem;
+
+  grid-column: 1 / 4;
+}
+
+.logo {
+  color: #d946ef;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 3.2rem;
+  margin-bottom: 2rem;
+}
+
+.search-term-list {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.btn {
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font: inherit;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+
+.btn--search-term {
+  background-color: #334155;
+  color: #cbd5e1;
+  transition: all 0.25s ease-in-out;
+}
+
+.btn--search-term:hover,
+.btn--search-term:active {
+  background-color: #2563eb;
+  color: #d3e6fe;
+}
