@@ -3,6 +3,6 @@
     <img [src]="gif.images.downsized_medium.url" [alt]="gif.title" />
   </div>
   <div class="card__text">
-    {{ gif.title }}
+    {{ gif.title | adaptTile | titlecase }}
   </div>
 </div>
