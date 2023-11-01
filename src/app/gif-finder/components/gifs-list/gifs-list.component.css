@@ -1,0 +1,6 @@
+.gifs-list {
+  padding: 5rem 0;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}

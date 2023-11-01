@@ -15,7 +15,7 @@ export class GifsSearchComponent {
   searchTerm($event: Event) {
     $event?.preventDefault();
     const searchTerm = this.searchInput.nativeElement.value;
-    this.gifsService.addSearchTerm(searchTerm);
+    this.gifsService.searchTerm(searchTerm);
     this.searchInput.nativeElement.value = '';
   }
 }
