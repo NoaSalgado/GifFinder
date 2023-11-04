@@ -10,7 +10,8 @@
   width: 100%;
 }
 
-.card__image img {
+.card__image img,
+.card__image svg {
   border-top-left-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
   object-fit: cover;
