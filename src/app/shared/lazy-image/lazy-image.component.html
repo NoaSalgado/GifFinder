@@ -5,6 +5,9 @@
     (load)="onLoad()"
     [ngStyle]="{ display: hasLoaded ? 'block' : 'none' }"
   />
+  <div #link class="link" (click)="copyToClipboard()">
+    <span class="material-symbols-outlined"> link </span> Copy GIF Link
+  </div>
 
   <div *ngIf="!hasLoaded" class="loader">
     <img src="../../../assets/loader.svg" />
