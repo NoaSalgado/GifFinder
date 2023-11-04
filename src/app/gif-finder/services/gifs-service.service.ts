@@ -11,10 +11,24 @@ export class GifsServiceService {
   private BASE_API_URL: string = 'http://api.giphy.com/v1/gifs';
   private API_KEY: string = 'cRQgdMTUlaSj90UJXA93pdhxFcL4QNZM';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+    this.getFromLocalStorage();
+  }
 
   get searchTermsHistory() {
     return [...this._searchTermsHistory];
+  }
+
+  private addToLocalStorage() {
+    localStorage.setItem(
+      'searchTerms',
+      JSON.stringify(this._searchTermsHistory)
+    );
+  }
+
+  private getFromLocalStorage() {
+    if (!localStorage.getItem('searchTerms')) return;
+    this._searchTermsHistory = JSON.parse(localStorage.getItem('searchTerms')!);
   }
 
   searchTerm(term: string) {
@@ -43,5 +57,7 @@ export class GifsServiceService {
     this.http
       .get<SearchResponse>(`${this.BASE_API_URL}/search`, { params })
       .subscribe((resp) => (this.gifsList = resp.data));
+
+    this.addToLocalStorage();
   }
 }
