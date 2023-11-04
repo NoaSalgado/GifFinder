@@ -16,4 +16,8 @@ export class SidenavComponent {
   searchAgain(term: string) {
     this.gifsService.searchTerm(term);
   }
+
+  deleteTerm(searchTerm: string) {
+    this.gifsService.deleteSearchTerm(searchTerm);
+  }
 }

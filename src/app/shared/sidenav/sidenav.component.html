@@ -4,6 +4,12 @@
     <li *ngFor="let searchTerm of searchTerms">
       <button class="btn btn--search-term" (click)="searchAgain(searchTerm)">
         {{ searchTerm | titlecase }}
+        <span
+          class="material-symbols-outlined"
+          (click)="deleteTerm(searchTerm)"
+        >
+          delete
+        </span>
       </button>
     </li>
   </ul>

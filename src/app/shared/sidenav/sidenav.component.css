@@ -23,6 +23,7 @@
   background-color: #334155;
   color: #cbd5e1;
   width: 100%;
+  position: relative;
   transition: all 0.25s ease-in-out;
 }
 
@@ -30,4 +31,18 @@
 .btn--search-term:active {
   background-color: #2563eb;
   color: #d3e6fe;
+}
+
+.btn--search-term:hover span {
+  opacity: 1;
+}
+
+.btn--search-term span {
+  color: #fae8ff;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.3s ease-in;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
 }

@@ -60,4 +60,11 @@ export class GifsServiceService {
 
     this.addToLocalStorage();
   }
+
+  deleteSearchTerm(searchTerm: string) {
+    this._searchTermsHistory = this._searchTermsHistory.filter(
+      (term) => term !== searchTerm
+    );
+    this.addToLocalStorage();
+  }
 }
