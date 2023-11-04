@@ -12,4 +12,8 @@ export class SidenavComponent {
   get searchTerms() {
     return this.gifsService.searchTermsHistory;
   }
+
+  searchAgain(term: string) {
+    this.gifsService.searchTerm(term);
+  }
 }

@@ -2,7 +2,9 @@
   <h1 class="logo">GifFinder</h1>
   <ul class="search-term-list">
     <li *ngFor="let searchTerm of searchTerms">
-      <button class="btn btn--search-term">{{ searchTerm | titlecase }}</button>
+      <button class="btn btn--search-term" (click)="searchAgain(searchTerm)">
+        {{ searchTerm | titlecase }}
+      </button>
     </li>
   </ul>
 </div>
